@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>MÃ©tÃ©o</title>
+        <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"
+              rel="stylesheet">
+    </head>
+<body>
+<nav th:insert="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark"></nav>
+        <div class="container">
+            <h1 class="text-center" th:text="'La mÃ©tÃ©o de ' + ${label}"></h1>
+            <div>
+                <ul class="list-group list-group-flush text-center">
+                    <li class="list-group-item" th:text="'Taux d\'humiditÃ© : ' + ${humidity} + ' %'"></li>
+                    <li class="list-group-item" th:text="'TempÃ©rature : ' + ${temperature} + ' Â°C'"></li>
+                    <li class="list-group-item" th:text="${summary}"></li>
+                </ul>
+            </div>
+        </div>
+</body>
+</form>
